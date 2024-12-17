@@ -1,0 +1,146 @@
+/* Slider Container */
+.mainSliderBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  z-index: -10;
+  background-color: #ecfdff;
+}
+
+.slider-container {
+  position: relative;
+  width: 90%;
+  /* Slider'ın genişliği %100 olacak */
+  height: auto;
+  /* Yükseklik otomatik */
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+
+/* Next ve Prev Butonları */
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Butonların arka planı */
+  color: white;
+  border: none;
+  font-size: 18px;
+
+  cursor: pointer;
+  border-radius: 5px;
+  width: 40px !important;
+  z-index: 10;
+  /* Diğer içeriklerin üstünde görünsün */
+}
+
+.swiper-button-prev {
+  position: relative;
+  top: 28px;
+  padding: 25px 26px;
+  transform: translateX(50px);
+}
+
+.swiper-button-next {
+  position: relative;
+  padding: 25px 30px;
+}
+
+.swiper-content img {
+  width: 100%;
+}
+
+.swiper-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+
+  .texts {
+    h2 {
+      font-size: 66px;
+      text-transform: capitalize;
+      font-weight: 700;
+      margin-bottom: 35px;
+      line-height: 72px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.8;
+      font-family: "Poppins", sans-serif;
+      margin-bottom: 70px;
+      padding-right: 80px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .swiper-content img {
+    width: 50%;
+  }
+
+  .mainSliderBox {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-content img {
+    width: 55%;
+    margin-top: 20px;
+    height: auto;
+  }
+
+  .mainSliderBox {
+    h2 {
+      font-size: 40px !important;
+    }
+
+    p {
+      font-size: 40px;
+    }
+  }
+
+  .mainSliderBox {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 635px) {
+  .swiper-content img {
+    display: none !important;
+  }
+  .sliderbutton{
+    display: none;
+  }
+  .mainSliderBox {
+   height: max-content;
+   padding-top: 50px;
+   padding-bottom: 50px;
+    h2  {
+      font-size: 40px !important;
+      text-align: center !important;
+    }
+    p{
+      font-size: 20px;
+      text-align: center !important;
+      width: auto;
+      transform: translateX(50px);
+    }
+  }
+
+  @media (max-width: 330) {
+    .swiper-content{
+      height: 50vh;
+    }
+    .swiper-content img {
+      display: none !important;
+    }
+  
+  
+    }
+  }
