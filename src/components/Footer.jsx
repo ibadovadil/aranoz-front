@@ -1,10 +1,11 @@
 import React from 'react'
-import { Nav } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import { Link, NavLink } from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+   <Container>
+     <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
       <>
       <Link to={"/"} className="col-md-4 col-sm-12 d-flex align-items-center justify-content-center  me-auto link-dark text-decoration-none">
         <img src="https://themewagon.github.io/aranoz/img/logo.png" alt="" className="img-fluid" />
@@ -21,6 +22,7 @@ const Footer = () => {
         </li>
       </ul>
     </footer>
+   </Container>
   )
 }
 
