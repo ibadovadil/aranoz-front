@@ -12,14 +12,14 @@ const Blog = () => {
   // Function to scroll the page to the bottom smoothly
   const scrollToBottom = () => {
     window.scrollTo({
-      top: document.body.scrollHeight, 
-      behavior: 'smooth', 
+      top: document.body.scrollHeight,
+      behavior: 'smooth',
     });
 
     // After the page scrolls down, hide the filter button after a short delay
     setTimeout(() => {
-      setIsVisible(false);  
-    }, 100);  
+      setIsVisible(false);
+    }, 100);
   };
 
   // Update the windowWidth state whenever the window is resized
@@ -39,9 +39,9 @@ const Blog = () => {
     const handleScroll = () => {
       // Hide the filter button when the page is scrolled near the bottom
       if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 200) {
-        setIsVisible(false);  
+        setIsVisible(false);
       } else {
-        setIsVisible(true);  
+        setIsVisible(true);
       }
     };
 
@@ -151,17 +151,47 @@ const Blog = () => {
         </div>
 
         <div className="blogRight col-lg-3 col-md-12 col-sm-12">
-          <div className="blogCategory">
-            <h2>Categories</h2>
+          <div className="blogSearch ">
+            <input type="text" placeholder="Search Keyword" name='q' />
+            <button className='btn btn-outline-secondary' type='submit' >Search</button>
           </div>
-
-          <div className="blogTags">
-            <h2>Tags</h2>
-          </div>
-
-          <div className="blogSearch">
-            <input type="text" placeholder="Search" />
-            <button>Search</button>
+          <div className="accordion mt-3" id="accordionExample">
+            <div className="accordion-item">
+              <h2 className="accordion-header">
+                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <div className="blogCategory">
+                    <h6>Categories</h6>
+                  </div>
+                </button>
+              </h2>
+              <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div className="accordion-body">
+                  <ul>
+                    <li><a href="">Travel</a></li>
+                    <li><a href="">Technology</a></li>
+                    <li><a href="">Healthy</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="accordion-item">
+              <h2 className="accordion-header">
+                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <div className="blogTags">
+                    <h6>Tags</h6>
+                  </div>
+                </button>
+              </h2>
+              <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div className="accordion-body">
+                  <ul>
+                    <li><a href="">technology</a></li>
+                    <li><a href="">lifestyle</a></li>
+                    <li><a href="">design</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </Container>

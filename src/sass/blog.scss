@@ -50,8 +50,6 @@
 
 
     .blogLeft {
-        border: 1px solid red;
-
         .blogCard {
             width: 750px;
             height: auto;
@@ -100,8 +98,45 @@
     }
 
     .blogRight {
-        height: 500px;
-        border: 1px solid greenyellow;
+        height: auto;
+
+        .blogSearch {
+            input {
+                width: 300px;
+                height: 45px;
+                border-radius: 10px;
+            }
+
+            button {
+                width: 300px;
+                height: 40px;
+                margin-top: 5px;
+            }
+        }
+
+        .accordion-body {
+            ul {
+                margin: 0;
+                padding: 0;
+
+                li {
+                    border-bottom: 1px solid grey;
+                    padding: 10px 0px 10px 0px;
+                    list-style: none;
+                    text-align: start;
+
+                    a {
+                        text-decoration: none;
+                        font-size: 20px;
+                        color: black;
+                    }
+                }
+            }
+        }
+
+        .accordion-button {
+            background: none;
+        }
     }
 
 
@@ -122,6 +157,18 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+
+        }
+
+        .blogSearch {
+            input {}
+
+            button {
+                margin-left: 20px !important;
+                height: 40px !important;
+                width: 100px !important;
+                transform: translateY(-5px);
+            }
         }
     }
 
@@ -137,7 +184,7 @@
                 img {
                     width: 450px !important;
                 }
-                
+
                 .blogCardText {
                     height: 220px;
                     padding-top: 10px;
@@ -245,6 +292,22 @@
                         font-weight: 400;
                         font-size: 10px;
                     }
+                }
+            }
+        }
+
+        .blogRight {
+
+            .blogSearch {
+                input {
+                    width: 200px !important;
+                }
+
+                button {
+                    height: 40px !important;
+                    width: 100px !important;
+                    transform: translateY(-5px);
+                    margin-top: 10px;
                 }
             }
         }
