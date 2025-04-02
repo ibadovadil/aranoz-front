@@ -10,6 +10,7 @@ import Nav from './components/Navigation.jsx';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
 import Footer from './components/Footer.jsx'
+import BlogDetails from './pages/BlogDetails.jsx'
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
         <Route path='/blog' element={<Blog/>}></Route>
         <Route path='/wishlist' element={<Wishlist/>}></Route>
         <Route path='/cart' element={<Cart/>}></Route>
+        <Route path='/blogDetails' element={<BlogDetails/>}></Route>
       </Routes>
       <Footer/>
     </BrowserRouter>

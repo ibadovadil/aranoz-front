@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import "../sass/blog.scss";
 import { Container } from 'react-bootstrap';
+import { Link, NavLink } from 'react-router-dom';
+import { LinkContainer } from 'react-router-bootstrap';
 
 const Blog = () => {
   // State to manage the visibility of the filter button (filterBtn)
@@ -62,6 +64,7 @@ const Blog = () => {
             </div>
           )}
           {/* Blog Card Start */}
+
           <div className="blogCard">
             <div className="blogCardImage">
               <img
@@ -70,7 +73,7 @@ const Blog = () => {
               />
             </div>
             <div className="blogCardText">
-              <h2>Google inks pact for new 35-storey office</h2>
+              <Link to={"/blogDetails"} style={{ textDecoration: "none" }} ><h2>Google inks pact for new 35-storey office</h2></Link>
               <p>
                 That dominion stars lights dominion divide years for fourth have
                 don't stars is that he earth it first without heaven in place
@@ -87,7 +90,7 @@ const Blog = () => {
               />
             </div>
             <div className="blogCardText">
-              <h2>Google inks pact for new 35-storey office</h2>
+              <Link to={"/blogDetails"} style={{ textDecoration: "none" }} ><h2>Google inks pact for new 35-storey office</h2></Link>
               <p>
                 That dominion stars lights dominion divide years for fourth have
                 don't stars is that he earth it first without heaven in place
@@ -104,7 +107,7 @@ const Blog = () => {
               />
             </div>
             <div className="blogCardText">
-              <h2>Google inks pact for new 35-storey office</h2>
+              <Link to={"/blogDetails"} style={{ textDecoration: "none" }} ><h2>Google inks pact for new 35-storey office</h2></Link>
               <p>
                 That dominion stars lights dominion divide years for fourth have
                 don't stars is that he earth it first without heaven in place
@@ -121,7 +124,7 @@ const Blog = () => {
               />
             </div>
             <div className="blogCardText">
-              <h2>Google inks pact for new 35-storey office</h2>
+              <Link to={"/blogDetails"} style={{ textDecoration: "none" }} ><h2>Google inks pact for new 35-storey office</h2></Link>
               <p>
                 That dominion stars lights dominion divide years for fourth have
                 don't stars is that he earth it first without heaven in place
@@ -130,23 +133,7 @@ const Blog = () => {
               <span>Tag:Travel,LifeStyle</span>
             </div>
           </div>
-          <div className="blogCard">
-            <div className="blogCardImage">
-              <img
-                src="https://themewagon.github.io/aranoz/img/blog/single_blog_1.png"
-                alt="Blog Image"
-              />
-            </div>
-            <div className="blogCardText">
-              <h2>Google inks pact for new 35-storey office</h2>
-              <p>
-                That dominion stars lights dominion divide years for fourth have
-                don't stars is that he earth it first without heaven in place
-                seed it second morning saying.
-              </p>
-              <span>Tag:Travel,LifeStyle</span>
-            </div>
-          </div>
+
           {/* Blog Card End */}
         </div>
 
